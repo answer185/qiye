@@ -1,21 +1,11 @@
 ---
-title: Front-end Meditations-七夜
+title: 七夜的博客
 hero:
-  title: Front-end Meditations
-  description: 七夜
+  title: 日研技，夜写心
+  description: 专注高性能Web应用开发 | 开源贡献者 | 企业级项目复盘
   actions:
-    - text: Hello
-      link: /
-    - text: World
-      link: /
-features:
-  - title: Hello
-    emoji: 💎
-    description: Put hello description here
-  - title: World
-    emoji: 🌈
-    description: Put world description here
-  - title: '!'
-    emoji: 🚀
-    description: Put ! description here
+    - text: 前端开发
+      link: /dev
+    - text: 企业级应用
+      link: /2b
 ---
