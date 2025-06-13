@@ -157,7 +157,15 @@ place-content: <align-content> <justify-content>
   grid-template-rows: 50px 50px ;
 }
 ```
-
+### grid-template
+该属性是 grid-template-columns、grid-template-rows、grid-template-areas 这三个属性的简写形式。
+格式如下：
+```css
+grid-template: none | 
+              [ <grid-template-rows> / <grid-template-columns> ] |
+              [ <grid-template-areas> [ <grid-template-rows> / <grid-template-columns> ]? ];
+```
+示例：
 ```css
 /* 定义行和列 */
 .container {
@@ -183,14 +191,6 @@ place-content: <align-content> <justify-content>
   grid-template-rows: 80px 1fr 60px;
   grid-template-columns: 200px 1fr 150px;
 }
-```
-### grid-template
-该属性是 grid-template-columns、grid-template-rows、grid-template-areas 这三个属性的简写形式。
-格式如下：
-```css
-grid-template: none | 
-              [ <grid-template-rows> / <grid-template-columns> ] |
-              [ <grid-template-areas> [ <grid-template-rows> / <grid-template-columns> ]? ];
 ```
 ### grid
 该属性是grid-template-rows、grid-template-columns、grid-template-areas、 grid-auto-rows、grid-auto-columns、grid-auto-flow 这六个属性的简写形式。

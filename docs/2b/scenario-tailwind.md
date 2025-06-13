@@ -7,167 +7,460 @@ order: 5
 ---
 # Tailwind 开发总结
 ## 盒子模型
+### 盒子
 - block: 设置为块级元素
 - box-border: 宽高包括padding和border
 - box-content: 宽高不包括pading和border，只有内容的宽高
-- padding相关：
-  - p-8: padding: 0.25rem*8, 2*16px=32px
-  - pt-6: padding-top
-  - pr-4: padding-right
-  - pb-8: pading-bottom
-  - pl-2: padding-left
-  - px-8: 左右两边padding
-  - py-8：上下两头padding
-  - ps-8: 内容起始位置padding
-  - pe-8: 内容结束位置padding
-  - p-[5px]: 自定义间距
-  - p-(--my-padding): 使用css变量
-- margin相关
-  - m-8: margin: 0.25rem*8，2*16px=32px
-  - mt-6: margin-top
-  - mb-8: margin-bottom
-  - ml-2: margin-left
-  - mr-4: margin-right
-  - mx-8: 左右两边的padding
-  - my-8: 上下两头的padding
-  - -m-8: margin: -0.25rem*8, -2*16px=-32px
-  - ms-8: 内容起始位置margin
-  - me-8: 内容结束位置margin
-  - space-x-4: 元素之间的margin
-  - space-y-4: 元素上下之间的maring（二者与gap的效果类似，但是实现形式不同，space-x使用margin-right或margin-left控制，而gap依赖gap属性）
-  - m-[5px]: 自定义间距
-  - m-(--my-margin): 使用css变量
-- 宽度相关
-  - w-96: width: 0.25rem*96, 24*16px
-  - w-full: width: 100%
-  - w-2/5: width: 40%
-  - w-3xs: 16rem, 256px
-  - w-2xs: 18rem, 288px
-  - w-xs: 20rem, 320px
-  - w-sm: 24rem, 384px
-  - w-md: 28rem, 448px
-  - w-lg: 32rem, 512px
-  - w-xl: 36rem, 576px
-  - w-2xl: 42rem，672px
-  - w-3xl: 48rem, 768px
-  - w-4xl: 56rem, 896px
-  - w-5xl: 64rem, 1024px
-  - w-6xl: 72rem, 1152px
-  - w-7xl: 80rem, 1280px
-  - w-screen: 整个窗口宽度
-  - size-16: width: 16 * 0.25rem, height: 16*0.25rem
-  - w-[5px]: 自定义宽度
-  - w-(--my-width): 使用css变量
-  - min-w-*: 最小宽度，后缀及作用与上同
-  - max-w-*: 最大宽度，后缀及作用与上同
-- 高度相关
-  - h-96：height: 0.25rem*96, 24*16px
-  - h-full: height: 100%
-  - h-2/5: height: 40%
-  - h-screen: 屏幕的高度
-  - h-dvh: 整个视口的高度，随着浏览器的扩展和收缩变化
-  - h-lvh: 设置为视口的最大可能高度
-  - h-svh: 设置为视口的最小可能高度
-  - h-[32rem]: 动态设置
-  - h-(--my-height): 使用css变量设置
-  - min-height-*: 最小高度，后缀及作用与上同
-  - max-height-*: 最大高度，后缀及作用与上同
-- border相关
-  - border: 1px的边框
-  - border-2: 2px的边框
-  - border-t-4: 上边框4px
-  - border-r-4: 右边框4px
-  - border-b-4: 下边框4px
-  - border-l-4: 左边框4px
-  - border-x-4: 左右边框4px
-  - border-y-4: 上下边框4px
-  - border-s-4: 起始内容侧边框4px
-  - broder-e-4: 结束内容侧边框4px
-  - divide-x-4: 横向重合的边框4px
-  - divide-y-4: 纵身重合的边框4px
-  - divide-x-reverse: 确保在如flex-col-reverse情况下正确设置边框
-  - divide-y-reverse: 确保在如flex-col-reverse情况下正确设置边框
-  - border-[2vw]: 动态设置值
-  - border-(length:--my-border-width): 使用css变量设置
-  - border-solid: solid形态
-  - border-dashed: dashed形态
-  - border-dotted: dotted形态
-  - border-double: double形态
-  - border-none: 无边框
-  - divide-dashed：重合边框为dashed形态
-  - divide-dotted: 重合边框为dotted形态
-  - border-purple-500: 边框颜色为purple-500
-  - border-indigo-500/50: 边框颜色为indigo-500，透明度为50
-  - border-t-indigo-500: 上边框颜色为indigo-500
-  - border-r-indigo-500: 右边框颜色为indigo-500
-  - border-b-indigo-500: 下边框颜色为indigo-500
-  - border-l-indigo-500: 左边框颜色为indigo-500
-  - border-x-indigo-500: 左右边框颜色为indigo-500
-  - border-y-indigo-500: 上下边框颜色为indigo-500
-  - border-s-indigo-500: 起始内容边框颜色为indigo-500
-  - border-3-indigo-500: 结束内容边框颜色为indigo-500
-  - divide-indigo-500: 重合边框颜色为indigo-500
-  - border-[#243c5a]: 动态设置颜色
-  - border-(--my-border): 使用css变量设置颜色
-  - focus:border-pink-600: focus时的border颜色
-  - rounded-xs: 0.125rem,2px
-  - rounded-sm: 0.25rem,4px
-  - rounded-md: 0.375rem,6px
-  - rounded-lg: 0.5rem,8px
-  - rounded-xl: 0.75rem,12px
-  - rounded-2xl: 1rem,16px
-  - rounded-3xl: 1.5rem,24px
-  - rounded-4xl: 2rem,32px
-  - rounded-t-lg: 上边框圆角
-  - rounded-r-lg: 右边框圆角
-  - rounded-b-lg: 下边框圆角
-  - rounded-l-lg: 左边框圆角
-  - rounded-tl-lg: 左上角圆角
-  - rounded-tr-lg: 右上角圆角
-  - rounded-br-lg: 右下角圆角
-  - rounded-bl-lg: 左下角圆角
-  - rounded-s-md: 起始内容圆角
-  - rounded-e-md: 结束内容圆角
-  - rounded-full: border-radius: 50%
-  - rounded-none: 无圆角
-  - rounded-[2vw]: 动态设置
-  - rounded-(--my-radius): 使用css变量
-- outline相关（与border的区别是：不占据空间，不支持圆角，只能统一设置4条边。设置后边框会悬浮在外部，覆盖周边内容）
-  - outline: 1px的边框
-  - outline-2: 2px的边框
-  - outline-[2vw]: 动态设置值
-  - outline-(length:--my-outline-width): 使用css变量设置
-  - outline-solid: solid形态
-  - outline-dashed: dashed形态
-  - outline-dotted: dotted形态
-  - outline-double: double形态
-  - outline-hidden: 隐藏浏览器默认的效果
-  - outline-none: 取消outline
-  - outline-blue-500: 设置颜色为blue-500
-  - outline-blue-500/50: 设置颜色为blue-500,透明度为50
-  - outline-[#243c5a]: 动态设置颜色
-  - outline-(--my-color): 使用css变量
-  - outline-offset-2： 往外偏移2px
-  - outline-offset-[2vw]: 动态设置
-  - outline-offset-(--my-outline-offset) : 使用变量设置
-- 背景相关
-- 内容相关
-## 传统布局
+### padding
+- p-8: padding: 0.25rem x 8, 2 x 16px=32px
+- pt-6: padding-top
+- pr-4: padding-right
+- pb-8: pading-bottom
+- pl-2: padding-left
+- px-8: 左右两边padding
+- py-8：上下两头padding
+- ps-8: 内容起始位置padding
+- pe-8: 内容结束位置padding
+- p-[5px]: 自定义间距
+- p-(--my-padding): 使用css变量
+### margin
+- m-8: margin: 0.25rem x 8，2x16px=32px
+- mt-6: margin-top
+- mb-8: margin-bottom
+- ml-2: margin-left
+- mr-4: margin-right
+- mx-8: 左右两边的padding
+- my-8: 上下两头的padding
+- -m-8: margin: -0.25rem x 8, -2 x16px=-32px
+- ms-8: 内容起始位置margin
+- me-8: 内容结束位置margin
+- space-x-4: 元素之间的margin
+- space-y-4: 元素上下之间的maring（二者与gap的效果类似，但是实现形式不同，space-x使用margin-right或margin-left控制，而gap依赖gap属性）
+- m-[5px]: 自定义间距
+- m-(--my-margin): 使用css变量
+### 宽度相关
+- w-96: width: 0.25rem x 96, 24 x 16px
+- w-full: width: 100%
+- w-2/5: width: 40%
+- w-3xs: 16rem, 256px
+- w-2xs: 18rem, 288px
+- w-xs: 20rem, 320px
+- w-sm: 24rem, 384px
+- w-md: 28rem, 448px
+- w-lg: 32rem, 512px
+- w-xl: 36rem, 576px
+- w-2xl: 42rem，672px
+- w-3xl: 48rem, 768px
+- w-4xl: 56rem, 896px
+- w-5xl: 64rem, 1024px
+- w-6xl: 72rem, 1152px
+- w-7xl: 80rem, 1280px
+- w-screen: 整个窗口宽度
+- size-16: width: 16 x 0.25rem, height: 16 x 0.25rem
+- w-[5px]: 自定义宽度
+- w-(--my-width): 使用css变量
+- min-w-*: 最小宽度，后缀及作用与上同
+- max-w-*: 最大宽度，后缀及作用与上同
+### 高度相关
+- h-96：height: 0.25rem x 96, 24 x 16px
+- h-full: height: 100%
+- h-2/5: height: 40%
+- h-screen: 屏幕的高度
+- h-dvh: 整个视口的高度，随着浏览器的扩展和收缩变化
+- h-lvh: 设置为视口的最大可能高度
+- h-svh: 设置为视口的最小可能高度
+- h-[32rem]: 动态设置
+- h-(--my-height): 使用css变量设置
+- min-height-*: 最小高度，后缀及作用与上同
+- max-height-*: 最大高度，后缀及作用与上同
+### border相关
+- border: 1px的边框
+- border-2: 2px的边框
+- border-t-4: 上边框4px
+- border-r-4: 右边框4px
+- border-b-4: 下边框4px
+- border-l-4: 左边框4px
+- border-x-4: 左右边框4px
+- border-y-4: 上下边框4px
+- border-s-4: 起始内容侧边框4px
+- broder-e-4: 结束内容侧边框4px
+- divide-x-4: 横向重合的边框4px
+- divide-y-4: 纵身重合的边框4px
+- divide-x-reverse: 确保在如flex-col-reverse情况下正确设置边框
+- divide-y-reverse: 确保在如flex-col-reverse情况下正确设置边框
+- border-[2vw]: 动态设置值
+- border-(length:--my-border-width): 使用css变量设置
+- border-solid: solid形态
+- border-dashed: dashed形态
+- border-dotted: dotted形态
+- border-double: double形态
+- border-none: 无边框
+- divide-dashed：重合边框为dashed形态
+- divide-dotted: 重合边框为dotted形态
+- border-purple-500: 边框颜色为purple-500
+- border-indigo-500/50: 边框颜色为indigo-500，透明度为50
+- border-t-indigo-500: 上边框颜色为indigo-500
+- border-r-indigo-500: 右边框颜色为indigo-500
+- border-b-indigo-500: 下边框颜色为indigo-500
+- border-l-indigo-500: 左边框颜色为indigo-500
+- border-x-indigo-500: 左右边框颜色为indigo-500
+- border-y-indigo-500: 上下边框颜色为indigo-500
+- border-s-indigo-500: 起始内容边框颜色为indigo-500
+- border-e-indigo-500: 结束内容边框颜色为indigo-500
+- divide-indigo-500: 重合边框颜色为indigo-500
+- border-[#243c5a]: 动态设置颜色
+- border-(--my-border): 使用css变量设置颜色
+- focus:border-pink-600: focus时的border颜色
+- rounded-xs: 0.125rem,2px
+- rounded-sm: 0.25rem,4px
+- rounded-md: 0.375rem,6px
+- rounded-lg: 0.5rem,8px
+- rounded-xl: 0.75rem,12px
+- rounded-2xl: 1rem,16px
+- rounded-3xl: 1.5rem,24px
+- rounded-4xl: 2rem,32px
+- rounded-t-lg: 上边框圆角
+- rounded-r-lg: 右边框圆角
+- rounded-b-lg: 下边框圆角
+- rounded-l-lg: 左边框圆角
+- rounded-tl-lg: 左上角圆角
+- rounded-tr-lg: 右上角圆角
+- rounded-br-lg: 右下角圆角
+- rounded-bl-lg: 左下角圆角
+- rounded-s-md: 起始内容圆角
+- rounded-e-md: 结束内容圆角
+- rounded-full: border-radius: 50%
+- rounded-none: 无圆角
+- rounded-[2vw]: 动态设置
+- rounded-(--my-radius): 使用css变量
+### outline相关
+与border的区别是：不占据空间，不支持圆角，只能统一设置4条边。设置后边框会悬浮在外部，覆盖周边内容
+- outline: 1px的边框
+- outline-2: 2px的边框
+- outline-[2vw]: 动态设置值
+- outline-(length:--my-outline-width): 使用css变量设置
+- outline-solid: solid形态
+- outline-dashed: dashed形态
+- outline-dotted: dotted形态
+- outline-double: double形态
+- outline-hidden: 隐藏浏览器默认的效果
+- outline-none: 取消outline
+- outline-blue-500: 设置颜色为blue-500
+- outline-blue-500/50: 设置颜色为blue-500,透明度为50
+- outline-[#243c5a]: 动态设置颜色
+- outline-(--my-color): 使用css变量
+- outline-offset-2： 往外偏移2px
+- outline-offset-[2vw]: 动态设置
+- outline-offset-(--my-outline-offset) : 使用变量设置
+### 背景相关
+- bg-blue-500: 背景颜色为blue-500
+- bg-blue-500/50: 背景颜色为blue-500且透明度为50
+- bg-[#50d71e]: 动态设置背景颜色
+- bg-(--my-color): 使用css变量设置背景颜色
+- bg-[url(/img/mountains.jpg)]: 设置背景图片
+- bg-linear-to-r from-cyan-500 to-blue-500: 设置横向渐变背景色
+- bg-linear-to-t from-sky-500 to-indigo-500: 设置纵向渐变背景色
+- bg-linear-to-bl from-violet-500 to-fuchsia-500: 设置从左上方到右下方的渐变背景色
+- bg-linear-65 from-purple-500 to-pink-500: 设置65度的背景渐变色
+- bg-radial from-pink-400 from-40% to-fuchsia-700: 设置圆形渐（径向渐变）变色的背景，从中心到40%背景是pink-400，从40%到边缘是fuchsia-700
+- bg-none: 无背景
+- bg-linear-[25deg,red_5%,yellow_60%,lime_90%,teal]: 自定义值
+- bg-linear-(--my-gradient): 使用css变量
+- bg-clip-border: 背景区域边界到border
+- bg-clip-padding: 背景区域边界到padding
+- bg-clip-content: 背景区域边界到内容
+- bg-clip-text: 背景区域为对应的文本
+- bg-origin-border: 背景区域从border开始
+- bg-origin-padding：背景区域从padding开始
+- bg-origin-content：背景区域从内容开始
+- bg-top-left: 使用背景图的左上角区域
+- bg-top: 使用背景图的上部中间部分
+- bg-top-right: 使用背景图的右上部分
+- bg-left: 使用背景图的左中部分。
+- bg-center: 使用背景图的正中部分。
+- bg-right: 使用背景图的右中部分。
+- bg-bottom-left: 使用背景图的左下部分。
+- bg-bottom: 使用背景图的下中部分。
+- bg-bottom-right: 使用背景图的右下部分。
+- bg-position-[center_top_1rem]: 动态设置值
+- bg-position-(--my-bg-position): 使用css变量
+- bg-repeat: 背景重复
+- bg-repeat-x: 背景横向重复
+- bg-repeat-y: 背景纵身重复
+- bg-no-repeat: 不重复
+- bg-cover: 自动缩放背景图，使完全覆盖整个容器区域。
+- bg-contain: 背景图等比例绽放，直到宽度或高度中较长的一边与容器匹配，图片始终完整显示，可能会出现没有背景的区域。
+- bg-auto: 保持背景图原始尺寸，如果图片比容器大，超出部分会被裁剪，如果小，且没有bg-repeat之类的设置，可能会出现没有背景的区域
+- bg-size[auto_100px]: 动态设置背景宽高
+- bg-size-(--my-image-size): 使用变量设置
+- bg-fixed: 固定背景图的位置，不随着内容滚动。
+- bg-local: 背景随内容滚动
+- bg-scroll: 背景图片会随元素本身滚动，但不随元素内容滚动
 
+### 内容相关
+- font-sans: 常用的字体ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' 
+- font-serif:常用的字体：ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif
+- font-mono: 常用的字体：ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace
+- font-[Open_Sans]: 动态传入字体
+- font-(family-name:--my-font): 使用css变量传入字体
+- text-xs: 0.75rem, 12px
+- text-sm: 0.875rem, 14px
+- text-base: 1rem, 16px
+- text-lg: 1.125rem, 18px
+- text-xl: 1.25rem, 20px
+- text-2xl: 1.5rem, 24px
+- text-3xl: 1.875rem, 30px
+- text-4xl: 2.25rem, 36px
+- text-5xl: 3rem, 48px
+- text-6xl: 3.75rem, 60px
+- text-7xl: 4.5rem, 72px
+- text-8xl: 6rem, 96px
+- text-9xl: 8rem, 128px
+- text-sm/6: 字体14px, line-height 6*0.25 =1.5rem, 约24px
+- text-[14px]: 动态设置字体大小
+- text-(length:--my-text-size): 使用变量设置字体大小
+- font-thin: 100
+- font-extralight: 200
+- font-light: 300
+- font-normal: 400
+- font-medium: 500
+- font-semibold: 600
+- font-bold: 700
+- font-extrabold: 800
+- font-black: 900
+- font-[1000]: 动态设置
+- font-(--my-font-weight): 使用css变量
+- text-blue-600: 设置颜色为blue-600
+- text-blue-600/25: 设置颜色为blue-600,透明度为25
+- text-[#50d71e]: 动态设置颜色
+- text-(--my-color): 使用css变量设置颜色
+- leading-none: line-height为1
+- leading-8: line-height为0.25rem * 8
+- leading-[1.5]: 动态设置
+- leading-(--my-line-height): 使用css变量
+- text-left: 内容靠左
+- text-center: 内容居中
+- text-right: 内容靠右
+- text-justify: 内容左右对齐
+- truncate: 不换行，内容溢出使用...表示
+- text-ellipsis: 内容溢出...表示内容
+- text-clip: 不截断，单词空间不足时，自动换行。
+- text-wrap: 内容过长时自动换行
+- text-nowrap: 内容过长也不换行
+- text-balance: 智能平衡多行文本的宽度
+- align-baseline: 靠baseline线
+- align-top: 靠顶部
+- align-middle:垂直居中
+- align-bottom: 靠底部
+- align-text-top：行内元素，高度不一样时，内容在顶部对齐
+- align-text-bottom：行内元素，高度不一样时，内容在底部对齐
+- align-[4px]: 动态设置对齐的位置，从基线向上偏移 4 像素
+- align-(--my-alignment): 使用css变量设置
+- whitespace-normal: 控制内容正常换行
+- whitespace-nowrap: 控制内容不换行
+- whitespace-pre: 控制内容按内置格式输出
+- whitespace-pre-line：控制内容按内置行格式输出
+- whitespace-break-spaces: 控制内容按内置的格式及空格格式输出
+- after:content-['_↗']: 控制某元素的前后额外内容，经常与::before及::after结合使用。
+- tracking-tighter: 字符的间距-0.05em
+- tracking-tight:字符的间距-0.025em
+- tracking-normal:字符的间距-0em
+- tracking-wide: 0.025em
+- tracking-wider: 0.05em
+- tracking-widest: 0.1em
+- tracking-[\<value\>]: 动态设置
+- tracking-(\<custom-property\>): 使用css变量
+- list-image-[url(/img/checkmark.png)]: 列表图标
+- list-inside： list图标在元素内
+- list-outside：list图标在元素外
+- list-disc：点的形式
+- list-decimal: 数字的形式
+- list-none: 无内容
+
+## 传统布局
+- inline-block: 行内块级元素
+- float-right: 向右浮动
+- float-left: 向左浮动
+- float-start: 向内容起始位置浮动
+- float-end: 向内容结束位置浮动
+- float-none: 不浮动
+- clear-left: 清除左浮动
+- clear-right: 清除右浮动
+- clear-both: 清除左右浮动
+- clear-start: 清除起始内容浮动
+- clear-end: 清除结束内容浮动
+- clear-none: 不清除浮动
+- static: 静态
+- fixed: 固定
+- absolute: 相对固定
+- relative: 相对位置
+- sticky: 粘性位置
+- top-0: 顶部
+- bottom-0: 底部
+- left-0: 左
+- right-0: 右
+- inset-x-4: 左右内边距为1rem
+- inset-y-4: 上下内边距为1rem
+- -top-4: 负值，外移0.25*4 = 1rem
+- inset-[\<value\>]: 动态传值
+- inset-(--my-position): 使用css变量
+- visible: 内容可见
+- invisible: 内容不可见
+- collapse: 隐藏表格的某一行
+- overflow-visible: 超出内容可见
+- overflow-hidden: 超出内容不可见
+- overflow-auto: 内容滚动
+- overflow-x-auto：内容横向滚动
+- overflow-y-auto：内容纵向滚动
+- overflow-x-scroll：内容横向滚动
+- overflow-y-scroll：内容纵向滚动
+- overflow-scroll: 内容横向纵向滚动
+- z-40: z-index:40
 ## Flex布局相关
+- flex: flex容器
+- flex-row: flex项目横向排版
+- flex-row-reverse: flex项目横向逆排版
+- flex-col: flex项目纵向排版
+- flex-col-reverse: flex项目纵向逆排版
+- flex-nowrap: 不换行
+- flex-wrap: 换行
+- flex-wrap-reverse: 逆向换行
+- justify-start: 内容靠起始位置
+- justify-center: 内容居中
+- justify-center-safe： 内容居中，区别在于，当内容超出容器时，内容会左路对齐。
+- justify-end： 内容靠结束位置
+- justify-end-safe：内容靠结束位置
+- justify-between: 项目使用空格隔开
+- justify-around：项目使用前后空格隔开
+- justify-evenly： 平均分各项目的长度
+- justify-stretch： 项目占满空间
+- justify-normal: 按内容的实际长度展示
+- items-start: 内容靠纵轴上方
+- items-end: 内容靠纵轴下方
+- items-stretch：内容铺满
+- items-center: 内容靠纵轴中间
+- items-baseline: 内容向参考线对齐
+- items-baseline-last：内容向下参考线对齐
+- gap-4: 行和列的间距，0.25*4=1rem
+- gap-x-4: 行间距
+- gap-y-4: 列间距
+- gap-[10vw]: 动态指定
+- gap-(--my-gap)：使用css变量
+- order-3: 项目属性：序号
+- order-last:最后一个项目
+- order-first： 第一个项目
+- order-[min(var(--total-items),10)]: 动态设置
+- order-(--my-order)： 使用css变量设置
+- grow: flex-grow: 1
+- grow-3: 占3份拆分的多余空间
+- grow-[25vw]: 动态设置
+- grow-(--my-grow): 使用css变量
+- shrink: 等比收缩，比例为1
+- shrink-0: 不收缩
+- shirink-2: 等比收缩，比例为2
+- basis-64: 项目的宽度为64*0.25rem=16rem
+- basis-full: 100%
+- basis-2/3: 2/3
+- basis-auto: 由浏览器控制
+- basis-3xs\~basis-7xl: 256px\~1280px
+- basis-[30vw]: 动态设置
+- basis-(--my-basis)：使用变量设置
+- self-start: 指定项目的内容靠纵轴的起始位置
+- self-center：指定项目的内容靠纵轴的中间位置
+- self-end：指定项目的内容靠纵轴的结束位置
+- self-stretch：指定项目的内容拉伸，占满整个位置
+- self-baseline：指定项目的内容拉伸靠近baseline
+- self-baseline-last：指定项目的内容拉伸靠近下baseline
 
 ## Grid布局相关
-
-## Icons相关
-
-## layout相关
-
-## 表单页面相关
-
-## 列表页面相关
-
-## 弹窗相关
-
-## 动画效果
+- grid: grid容器
+- grid-cols-4: 分为等比的4列
+- grid-cols-subgrid：继承父网格的列轨道（包括宽度、间隙等），无需重新定义，保持布局对齐，通常与：col-span-3（有几列）及col-start-2，从哪个格开始结合使用。
+- grid-cols-[200px_minmax(900px,_1fr)_100px]：动态指定列的信息
+- grid-cols-(--my-grid-cols)：使用变量指定列的信息
+- col-span-2：项目占两个单元格
+- col-start-2：项目从哪个单元格开始
+- col-end-3：项目结束的单元格
+- col-[16_/_span_16]：动态指定项目的起始位置
+- col-(--my-columns)：使用变量指定
+- grid-rows-4：指定grid有4行
+- grid-rows-subgrid： 继承父网格的行轨道，常与row-span-3及row-start-2等类结合使用
+- grid-rows-[200px_minmax(900px,1fr)_100px]： 动态指定行的信息
+- grid-rows-(--my-grid-rows)：使用变量指定行的信息
+- row-span-3： 项目占3行
+- row-start-2： 项目从第2行开始
+- row-end-3：项目在第3行结束
+- row-[span_16_/_span_16]：动态设置项目的起始行和结束行
+- row-(--my-rows)： 使用变量指定
+- grid-flow-row： 项目按行排列
+- grid-flow-col： 项目按列排列
+- grid-flow-dense： 先行后列，尽量紧密
+- grid-flow-col-dense： 先列后行，尽量紧密
+- auto-cols-min：使用内容中最小的列
+- auto-cols-max：使用内容中最大的列
+- auto-cols-[minmax(0,2fr)]： 动态指定
+- auto-cols-(--my-auto-cols)：使用css变量
+- auto-rows-min：使用内容中最小的行
+- auto-rows-max: 使用内容中最大的行
+- auto-rows-[minmax(0,2fr)]：动态指定大小 
+- auto-rows-(--my-auto-rows)：使用css变量指定
+- gap-4: 行和列的间距，0.25*4=1rem
+- gap-x-4: 行间距
+- gap-y-4: 列间距
+- gap-[10vw]: 动态指定
+- gap-(--my-gap)：使用css变量
+- justify-start: 内容靠起始位置
+- justify-center: 内容居中
+- justify-center-safe： 内容居中，区别在于，当内容超出容器时，内容会左路对齐。
+- justify-end： 内容靠结束位置
+- justify-end-safe：内容靠结束位置
+- justify-between: 项目使用空格隔开
+- justify-around：项目使用前后空格隔开
+- justify-evenly： 平均分各项目的长度
+- justify-stretch： 项目占满空间
+- justify-normal: 按内容的实际长度展示
+- content-normal：内容正常排列
+- content-center：内容垂直居中
+- content-start：内容靠上
+- content-end：内容靠下
+- content-between： 内容使用空格隔开
+- content-around：内容带前后空格隔开
+- content-evenly：内容空间均分
+- content-baseline： 内容靠近baseline
+- content-stretch：内容拉伸
+- place-content-center: 内容横向和纵向都居中
+- place-content-start：内容靠左上角
+- place-content-end：内容靠右下角
+- place-content-between：内容靠4个角
+- place-content-around：内容和上下间距都有空格
+- place-content-evenly：内容横向和纵向都均分
+- place-content-stretch：内容横向和纵向都拉伸
+- justify-items-start：项目内容靠左
+- justify-items-end：项目内容靠右
+- justify-items-center：项目内容居中
+- justify-items-stretch：项目内容拉伸
+- items-start: 内容靠纵轴上方
+- items-end: 内容靠纵轴下方
+- items-stretch：内容铺满
+- items-center: 内容靠纵轴中间
+- items-baseline: 内容向参考线对齐
+- items-baseline-last：内容向下参考线对齐
+- place-items-start： 项目内容靠左上角
+- place-items-end：项目内容靠右下角
+- place-items-center：项目的内容横向和纵向都居中
+- place-items-stretch：项目的内容横向和纵向都拉伸
+- place-self-*: 针对某个项目的单独的内容排版，值有start\end\center\stretch
 
 ## 响应式
+- sm: 40rem, 640px
+- md: 48rem, 768px
+- lg: 64rem, 1024px
+- xl: 80rem, 1280px
+- 2xl: 96rem, 1536px
+- max-sm: width < 40rem
+- max-md: width < 48rem
+- max-lg: width < 64rem
+- max-xl: width < 80rem
+- max-2xl: width < 96rem
+- max-[600px]: 自定义长度
+- @container及@md: 基于@container容器做响应式
