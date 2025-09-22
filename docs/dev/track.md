@@ -73,8 +73,11 @@ console.log({
   loadEventEnd: navigationTiming.loadEventEnd,
   domComplete: navigationTiming.domComplete
 });
-数据上报
+```
+#### 数据上报
+
 监听load事件，通过navigator.sendBeacon()上报，避免阻塞页面卸载
+```js
 // 综合监控示例
 function collectPerfMetrics() {
   // 1. 导航时序数据
@@ -278,9 +281,11 @@ function getPerformanceMetrics() {
 #### 无痕埋点
 其原理是做全局监听，通过劫持或监听全局事件（点击、滚动、页面跳转等），自动记录用户交互行为。
 一般通过CSS选择器+层级的路径来生成事件标识。
-优点：
+
+**优点：**
 - 无需手动添加跟踪代码，可以大幅降低开发成本。
-缺点：
+
+**缺点：**
 - 会采集到大量冗余数据，难以精确捕获一些复杂的用户行为。
 - 需要对数据进行过滤。
 
@@ -314,17 +319,21 @@ Vue.directive('collect', {
         // doSomething....
     }
 });
-
-在元素上添加dataset标识
+```
+#### 在元素上添加dataset标识
 比如data-track-id及data-params，然后由统一事件捕获，寻找所有带相关标识的元素，并做监听和上报。
+```html
 <button data-track-id="product_123_buy">购买</button>
-错误数据上报
+```
+#### 错误数据上报
 通过监听error事件捕获错误
+```js
 window.addEventListener('error', e => {
     console.log('e: ', e);
 })
-
+```
 promise的错误捕获：
+```js
 window.addEventListener('unhandledrejection', (e: PromiseRejectionEvent) => {
     e.preventDefault();
 
@@ -334,8 +343,9 @@ window.addEventListener('unhandledrejection', (e: PromiseRejectionEvent) => {
         this.sendData({ type: 'promise', msg })
     })
 })
-
+```
 资源加载错误，通过错误类型区分：
+```js
 window.addEventListener('error', e => {
     e.preventDefault();
 
