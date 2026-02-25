@@ -1,7 +1,7 @@
 {
   "name": "qiye-think",
   "version": "0.0.1",
-  "description": "A blog by qiye",
+  "description": "A technical blog by qiye - focusing on frontend development and enterprise applications",
   "scripts": {
     "start": "npm run dev",
     "dev": "dumi dev",

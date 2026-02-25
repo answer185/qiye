@@ -8,7 +8,10 @@ nav:
 
 ## Project Experience
 - NextJS Admin Template
-- Empty-handed delivery
+- Empty Hand Cargo
 - Component Library
-- Micro frontend framework
-- Red Circle Marketing-WEB
+- Micro-Frontend Framework
+- Red Circle Marketing - WEB
+- Red Circle Marketing - Mobile
+- E-commerce - Version System
+- WP Website Building and Optimization
