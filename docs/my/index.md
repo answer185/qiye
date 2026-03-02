@@ -1,7 +1,7 @@
 ---
 nav:
   title: 简历
-  order: 7
+  order: 3
 ---
 # 简历
 

@@ -4,8 +4,9 @@
   "description": "A technical blog by qiye - focusing on frontend development and enterprise applications",
   "scripts": {
     "start": "npm run dev",
-    "dev": "dumi dev",
-    "build": "dumi build",
+    "dev": "npm run gen:articles && dumi dev",
+    "build": "npm run gen:articles && dumi build",
+    "gen:articles": "node scripts/generate-article-list.js",
     "preview": "dumi preview",
     "prepare": "husky install && dumi setup"
   },
