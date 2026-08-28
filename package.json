@@ -7,6 +7,8 @@
     "dev": "npm run gen:articles && dumi dev",
     "build": "npm run gen:articles && dumi build",
     "gen:articles": "node scripts/generate-article-list.js",
+    "build:deploy": "npm run build && npm run deploy:dist",
+    "deploy:dist": "node scripts/deploy-dist.js",
     "preview": "dumi preview",
     "prepare": "husky install && dumi setup"
   },

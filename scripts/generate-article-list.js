@@ -86,3 +86,69 @@ for (const cat of CATEGORIES) {
 if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 fs.writeFileSync(path.join(OUT_DIR, 'article-list.json'), JSON.stringify(result, null, 2), 'utf-8');
 console.log('Generated .dumi/public/article-list.json');
+
+// ---------- 数字化战略组：自动写入 index.md 文章列表（按创建时间升序）----------
+const DS_DIR = 'career/digital-strategy';
+const DS_INDEX = path.join(DOCS_DIR, DS_DIR, 'index.md');
+const DS_START = '<!-- ARTICLE_LIST_START -->';
+const DS_END = '<!-- ARTICLE_LIST_END -->';
+
+function getBirthtime(fullPath) {
+  try {
+    const st = fs.statSync(fullPath);
+    // birthtime 不可用时（部分 Linux）回退到 ctime
+    const t = st.birthtimeMs || st.ctimeMs || st.mtimeMs || 0;
+    return t;
+  } catch {
+    return 0;
+  }
+}
+
+function generateDigitalStrategyList() {
+  const fullDir = path.join(DOCS_DIR, DS_DIR);
+  if (!fs.existsSync(fullDir) || !fs.existsSync(DS_INDEX)) return;
+
+  const entries = fs.readdirSync(fullDir, { withFileTypes: true });
+  const items = [];
+  for (const e of entries) {
+    if (!e.isFile() || !e.name.endsWith('.md') || e.name === 'index.md') continue;
+    const rel = path.join(DS_DIR, e.name);
+    const fullPath = path.join(DOCS_DIR, rel);
+    const content = fs.readFileSync(fullPath, 'utf-8');
+    const fm = extractFrontmatter(content);
+    const title = fm.title || getFirstHeading(content) || path.basename(e.name, '.md');
+    items.push({
+      title,
+      link: fileToRoute(rel),
+      birth: getBirthtime(fullPath),
+    });
+  }
+  items.sort((a, b) => a.birth - b.birth);
+
+  const listMd =
+    items.length === 0
+      ? '_暂无文章_'
+      : items.map((it) => `- [${it.title}](${it.link})`).join('\n');
+
+  let indexContent = fs.readFileSync(DS_INDEX, 'utf-8');
+  if (!indexContent.includes(DS_START) || !indexContent.includes(DS_END)) {
+    // 无标记时自动补上「文章列表」区块
+    if (!indexContent.includes('## 文章列表')) {
+      indexContent = indexContent.replace(/\s*$/, '') + `\n\n## 文章列表\n\n${DS_START}\n${DS_END}\n`;
+    } else {
+      indexContent = indexContent.replace(
+        /(## 文章列表\n)([\s\S]*)$/,
+        `$1\n${DS_START}\n${DS_END}\n`,
+      );
+    }
+  }
+
+  const next = indexContent.replace(
+    new RegExp(`${DS_START}[\\s\\S]*?${DS_END}`),
+    `${DS_START}\n${listMd}\n${DS_END}`,
+  );
+  fs.writeFileSync(DS_INDEX, next, 'utf-8');
+  console.log(`Updated ${DS_DIR}/index.md (${items.length} articles)`);
+}
+
+generateDigitalStrategyList();

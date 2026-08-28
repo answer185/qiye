@@ -70,7 +70,12 @@
       {
         "title": "基于Magento2+Docker的规模化建站方案",
         "link": "/project/ecommerce/magento2-docker",
-        "date": 1772159155916
+        "date": 1772500399691
+      },
+      {
+        "title": "使用Docker搭建Magento2的本地开发环境",
+        "link": "/project/ecommerce/magento2-docker-dev",
+        "date": 1772451092351
       },
       {
         "title": "电商应用",
@@ -83,29 +88,44 @@
     "title": "前端开发",
     "list": [
       {
-        "title": "React概述",
-        "link": "/tech/frontend/react-overview",
-        "date": 1772336677208
+        "title": "前端工程化思考",
+        "link": "/tech/frontend/frontend-engineering-thinking",
+        "date": 1772451179546
       },
       {
-        "title": "前端优化",
-        "link": "/tech/frontend/optimize",
-        "date": 1772336498925
+        "title": "前端预加载优化",
+        "link": "/tech/frontend/preload-optimize",
+        "date": 1772451179346
       },
       {
-        "title": "前端架构",
-        "link": "/tech/frontend/architecture",
-        "date": 1772336497894
-      },
-      {
-        "title": "前端技术选型",
-        "link": "/tech/frontend/selection",
-        "date": 1772336496982
+        "title": "首屏加载分析",
+        "link": "/tech/frontend/first-screen-load",
+        "date": 1772451177706
       },
       {
         "title": "前端工程化概述",
         "link": "/tech/frontend",
-        "date": 1772336496955
+        "date": 1772451176442
+      },
+      {
+        "title": "前端架构",
+        "link": "/tech/frontend/architecture",
+        "date": 1772451176260
+      },
+      {
+        "title": "前端优化",
+        "link": "/tech/frontend/optimize",
+        "date": 1772451176071
+      },
+      {
+        "title": "前端技术选型",
+        "link": "/tech/frontend/selection",
+        "date": 1772451175707
+      },
+      {
+        "title": "React概述",
+        "link": "/tech/frontend/react-overview",
+        "date": 1772336677208
       },
       {
         "title": "shadcn/ui使用指南",
@@ -116,21 +136,6 @@
         "title": "Tailwind CSS 使用",
         "link": "/tech/frontend/tailwindcss",
         "date": 1758507336902
-      },
-      {
-        "title": "前端埋点与监控",
-        "link": "/tech/frontend/track",
-        "date": 1758507336902
-      },
-      {
-        "title": "JSX与JS的区别",
-        "link": "/tech/frontend/react-jsx",
-        "date": 1758507336901
-      },
-      {
-        "title": "React生命周期",
-        "link": "/tech/frontend/react-lifecycle",
-        "date": 1758507336901
       }
     ]
   },
@@ -140,7 +145,7 @@
       {
         "title": "后端开发",
         "link": "/tech/backend",
-        "date": 1772337701920
+        "date": 1772337879737
       }
     ]
   },

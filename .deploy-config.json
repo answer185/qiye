@@ -1,0 +1,4 @@
+{
+  "deployRepo": "https://gitee.com/dcsky185/qiye-web-dist.git",
+  "description": "部署配置：将 deployRepo 设置为你的部署仓库地址"
+}
