@@ -15,4 +15,5 @@ nav:
 - [钉钉飞书等平台代替OA和HR的可行性](/career/digital-strategy/dingtalk-feishu-replace-oa-hr)
 - [制造业架构师的图谱：9 种常用架构表达方式](/career/digital-strategy/manufacturing-architect-9-diagrams)
 - [企业战略解读及架构落地](/career/digital-strategy/enterprise-strategy-architecture)
+- [企业架构的持续治理](/career/digital-strategy/enterprise-architecture-governance)
 <!-- ARTICLE_LIST_END -->
