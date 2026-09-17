@@ -20,4 +20,5 @@ nav:
 - [制造业灾备架构设计：从数据备份到业务连续性](/career/digital-strategy/manufacturing-disaster-recovery-architecture)
 - [企业 API Gateway 架构：从服务暴露到统一治理](/career/digital-strategy/enterprise-api-gateway-architecture)
 - [gRPC 架构：企业内部服务通信与制造业系统集成](/career/digital-strategy/grpc-architecture-manufacturing-integration)
+- [从业务问题到决策行动：BI 指标的完整实现链路](/career/digital-strategy/bi-metric-implementation-chain)
 <!-- ARTICLE_LIST_END -->
