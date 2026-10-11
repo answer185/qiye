@@ -1,7 +1,10 @@
 ---
 nav:
-  title: 运维
-  order: 5
+  title: 技术实践
+  order: 2
+  second:
+    title: 运维
+    order: 3
 toc: content
 ---
 

@@ -1,11 +1,21 @@
 {
-  "erp": {
-    "title": "鞋材ERP",
+  "flowpulse": {
+    "title": "线脉 FlowPulse",
     "list": [
       {
-        "title": "鞋材ERP",
-        "link": "/project/erp",
-        "date": 1771998926507
+        "title": "线脉 FlowPulse",
+        "link": "/project/flowpulse",
+        "date": 1791701972905
+      }
+    ]
+  },
+  "haokang": {
+    "title": "好慷在家",
+    "list": [
+      {
+        "title": "好慷在家",
+        "link": "/project/haokang",
+        "date": 1791701973529
       }
     ]
   },
@@ -15,7 +25,7 @@
       {
         "title": "企业应用",
         "link": "/project/enterprise",
-        "date": 1771998923112
+        "date": 1791701974696
       },
       {
         "title": "系统组件库",
@@ -65,8 +75,13 @@
     ]
   },
   "ecommerce": {
-    "title": "电商应用",
+    "title": "电商ERP",
     "list": [
+      {
+        "title": "电商ERP",
+        "link": "/project/ecommerce",
+        "date": 1791701975096
+      },
       {
         "title": "基于Magento2+Docker的规模化建站方案",
         "link": "/project/ecommerce/magento2-docker",
@@ -76,17 +91,52 @@
         "title": "使用Docker搭建Magento2的本地开发环境",
         "link": "/project/ecommerce/magento2-docker-dev",
         "date": 1772451092351
+      }
+    ]
+  },
+  "hechuang": {
+    "title": "和创科技",
+    "list": [
+      {
+        "title": "和创科技",
+        "link": "/project/hechuang",
+        "date": 1791701975493
+      }
+    ]
+  },
+  "ai": {
+    "title": "AI编程",
+    "list": [
+      {
+        "title": "AI编程",
+        "link": "/tech/ai",
+        "date": 1791704935873
       },
       {
-        "title": "电商应用",
-        "link": "/project/ecommerce",
-        "date": 1772016184017
+        "title": "使用 AGENTS.md 管理 AI 编程上下文",
+        "link": "/tech/ai/agents-md-context",
+        "date": 1791704934508
+      },
+      {
+        "title": "Cursor：基于Figma设计稿开发",
+        "link": "/tech/ai/cursor-figma",
+        "date": 1791704933780
       }
     ]
   },
   "dev": {
     "title": "前端开发",
     "list": [
+      {
+        "title": "前端架构",
+        "link": "/tech/frontend/architecture",
+        "date": 1791702126836
+      },
+      {
+        "title": "前端工程化概述",
+        "link": "/tech/frontend",
+        "date": 1791702103814
+      },
       {
         "title": "前端工程化思考",
         "link": "/tech/frontend/frontend-engineering-thinking",
@@ -101,16 +151,6 @@
         "title": "首屏加载分析",
         "link": "/tech/frontend/first-screen-load",
         "date": 1772451177706
-      },
-      {
-        "title": "前端工程化概述",
-        "link": "/tech/frontend",
-        "date": 1772451176442
-      },
-      {
-        "title": "前端架构",
-        "link": "/tech/frontend/architecture",
-        "date": 1772451176260
       },
       {
         "title": "前端优化",
@@ -145,22 +185,7 @@
       {
         "title": "后端开发",
         "link": "/tech/backend",
-        "date": 1772337879737
-      }
-    ]
-  },
-  "ai": {
-    "title": "AI编程",
-    "list": [
-      {
-        "title": "Cursor：基于Figma设计稿开发",
-        "link": "/tech/ai/cursor-figma",
-        "date": 1772113562132
-      },
-      {
-        "title": "AI编程",
-        "link": "/tech/ai",
-        "date": 1772107633673
+        "date": 1791702105047
       }
     ]
   },
@@ -168,14 +193,14 @@
     "title": "运维",
     "list": [
       {
+        "title": "运维",
+        "link": "/tech/ops",
+        "date": 1791702105534
+      },
+      {
         "title": "Docker的基础概念",
         "link": "/tech/ops/docker-basics",
         "date": 1772180097321
-      },
-      {
-        "title": "运维",
-        "link": "/tech/ops",
-        "date": 1772173448929
       }
     ]
   }

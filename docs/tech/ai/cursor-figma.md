@@ -1,9 +1,6 @@
 ---
 title: Cursor：基于Figma设计稿开发
 toc: content
-group:
-  title: Cursor
-  order: 1
 order: 1
 ---
 

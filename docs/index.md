@@ -16,9 +16,16 @@ title: 七夜的博客
 <div class="dumi-article-list">
 
 <section class="dumi-article-list-block">
-<h3 class="dumi-article-list-title">鞋材ERP</h3>
+<h3 class="dumi-article-list-title">线脉 FlowPulse</h3>
 <ul class="dumi-article-list-ul">
-<li><a href="/project/erp">鞋材ERP</a></li>
+<li><a href="/project/flowpulse">线脉 FlowPulse</a></li>
+</ul>
+</section>
+
+<section class="dumi-article-list-block">
+<h3 class="dumi-article-list-title">好慷在家</h3>
+<ul class="dumi-article-list-ul">
+<li><a href="/project/haokang">好慷在家</a></li>
 </ul>
 </section>
 
@@ -39,10 +46,26 @@ title: 七夜的博客
 </section>
 
 <section class="dumi-article-list-block">
-<h3 class="dumi-article-list-title">电商应用</h3>
+<h3 class="dumi-article-list-title">电商ERP</h3>
 <ul class="dumi-article-list-ul">
-<li><a href="/project/ecommerce">电商应用</a></li>
+<li><a href="/project/ecommerce">电商ERP</a></li>
 <li><a href="/project/ecommerce/magento2-docker">基于Magento2+Docker的快速建站方案</a></li>
+</ul>
+</section>
+
+<section class="dumi-article-list-block">
+<h3 class="dumi-article-list-title">和创科技</h3>
+<ul class="dumi-article-list-ul">
+<li><a href="/project/hechuang">和创科技</a></li>
+</ul>
+</section>
+
+<section class="dumi-article-list-block">
+<h3 class="dumi-article-list-title">AI编程</h3>
+<ul class="dumi-article-list-ul">
+<li><a href="/tech/ai">AI编程</a></li>
+<li><a href="/tech/ai/cursor-figma">Cursor：基于Figma设计稿开发</a></li>
+<li><a href="/tech/ai/agents-md-context">使用 AGENTS.md 管理 AI 编程上下文</a></li>
 </ul>
 </section>
 
@@ -66,14 +89,6 @@ title: 七夜的博客
 <h3 class="dumi-article-list-title">后端开发</h3>
 <ul class="dumi-article-list-ul">
 <li><a href="/tech/backend">后端开发</a></li>
-</ul>
-</section>
-
-<section class="dumi-article-list-block">
-<h3 class="dumi-article-list-title">AI编程</h3>
-<ul class="dumi-article-list-ul">
-<li><a href="/tech/ai">AI编程</a></li>
-<li><a href="/tech/ai/cursor-figma">Cursor：基于Figma设计稿开发</a></li>
 </ul>
 </section>
 

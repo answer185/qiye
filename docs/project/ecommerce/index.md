@@ -1,11 +1,14 @@
 ---
 nav:
-  title: 电商应用
-  order: 3
+  title: 企业应用
+  order: 1
+  second:
+    title: 电商ERP
+    order: 3
 ---
 
-# 电商应用
+# 电商ERP
 
-电商应用相关项目实践与复盘。
+电商ERP相关项目实践与复盘。
 
 （内容待补充）

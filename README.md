@@ -19,11 +19,12 @@
 qiye/
 ├── docs/                 # 文档与博客内容
 │   ├── index.md          # 首页
-│   ├── project/          # 项目（企业级应用与项目复盘）
-│   ├── tech/             # 技术（前端开发、后端开发、AI编程）
+│   ├── project/          # 企业应用（线脉、好慷在家、电商ERP、和创科技等）
+│   ├── tech/             # 技术实践（AI编程、前端开发、后端开发、运维）
+│   │   ├── ai/           # AI编程
 │   │   ├── frontend/     # 前端开发
 │   │   ├── backend/      # 后端开发
-│   │   └── ai/           # AI编程
+│   │   └── ops/          # 运维
 │   └── my/               # 简历
 ├── .dumirc.ts            # dumi 配置
 ├── package.json
@@ -32,7 +33,7 @@ qiye/
 
 ## 首页
 
-首页为文章列表：按 **项目**（鞋材ERP、企业应用、电商应用）与 **技术**（前端开发、后端开发、AI编程、运维）共 7 个分类展示，一行 2 块，每块最多 10 篇最近文章。数据由 `npm run gen:articles` 在 dev/build 前自动生成（`scripts/generate-article-list.js` → `.dumi/public/article-list.json`）。本站仅中文，英文博客计划用 Next.js 单独建设。
+首页为文章列表：按 **企业应用**（线脉 FlowPulse、好慷在家、企业应用、电商ERP、和创科技）与 **技术实践**（AI编程、前端开发、后端开发、运维）分类展示，一行 2 块，每块最多 10 篇最近文章。数据由 `npm run gen:articles` 在 dev/build 前自动生成（`scripts/generate-article-list.js` → `.dumi/public/article-list.json`）。本站仅中文，英文博客计划用 Next.js 单独建设。
 
 ## 开发
 

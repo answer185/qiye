@@ -4,10 +4,16 @@ import './index.less';
 
 // 静态写死分类及文章，后续可在本文件直接修改（本站仅中文）
 const STATIC_DATA: Record<string, { title: string; list: { title: string; link: string }[] }> = {
-  erp: {
-    title: '鞋材ERP',
+  flowpulse: {
+    title: '线脉 FlowPulse',
     list: [
-      { title: '鞋材ERP', link: '/project/erp' },
+      { title: '线脉 FlowPulse', link: '/project/flowpulse' },
+    ],
+  },
+  haokang: {
+    title: '好慷在家',
+    list: [
+      { title: '好慷在家', link: '/project/haokang' },
     ],
   },
   enterprise: {
@@ -26,10 +32,16 @@ const STATIC_DATA: Record<string, { title: string; list: { title: string; link: 
     ],
   },
   ecommerce: {
-    title: '电商应用',
+    title: '电商ERP',
     list: [
-      { title: '电商应用', link: '/project/ecommerce' },
+      { title: '电商ERP', link: '/project/ecommerce' },
       { title: '基于Magento2+Docker的快速建站方案', link: '/project/ecommerce/magento2-docker' },
+    ],
+  },
+  hechuang: {
+    title: '和创科技',
+    list: [
+      { title: '和创科技', link: '/project/hechuang' },
     ],
   },
   dev: {
@@ -58,6 +70,7 @@ const STATIC_DATA: Record<string, { title: string; list: { title: string; link: 
     list: [
       { title: 'AI编程', link: '/tech/ai' },
       { title: 'Cursor：基于Figma设计稿开发', link: '/tech/ai/cursor-figma' },
+      { title: '使用 AGENTS.md 管理 AI 编程上下文', link: '/tech/ai/agents-md-context' },
     ],
   },
   ops: {
@@ -69,7 +82,17 @@ const STATIC_DATA: Record<string, { title: string; list: { title: string; link: 
   },
 };
 
-const CATEGORY_ORDER = ['erp', 'enterprise', 'ecommerce', 'dev', 'laravel', 'ai', 'ops'];
+const CATEGORY_ORDER = [
+  'flowpulse',
+  'haokang',
+  'enterprise',
+  'ecommerce',
+  'hechuang',
+  'ai',
+  'dev',
+  'laravel',
+  'ops',
+];
 
 export default function ArticleList() {
   return (

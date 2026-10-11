@@ -1,7 +1,10 @@
 ---
 nav:
-  title: 前端开发
-  order: 1
+  title: 技术实践
+  order: 2
+  second:
+    title: 前端开发
+    order: 1
 toc: content
 group:
   title: 前端开发

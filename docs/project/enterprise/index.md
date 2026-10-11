@@ -1,7 +1,10 @@
 ---
 nav:
   title: 企业应用
-  order: 2
+  order: 1
+  second:
+    title: 企业应用
+    order: 2
 ---
 
 # 企业应用
