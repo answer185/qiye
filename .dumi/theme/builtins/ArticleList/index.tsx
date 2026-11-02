@@ -63,6 +63,7 @@ const STATIC_DATA: Record<string, { title: string; list: { title: string; link: 
     title: '后端开发',
     list: [
       { title: '后端开发', link: '/tech/backend' },
+      { title: '微服务理解', link: '/tech/backend/microservices-understanding' },
     ],
   },
   ai: {

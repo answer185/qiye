@@ -94,6 +94,7 @@ const GROUP_DIRS = [
   'digital-architecture/digital-strategy',
   'digital-architecture/togaf',
   'tech/ai',
+  'tech/backend',
 ];
 const LIST_START = '<!-- ARTICLE_LIST_START -->';
 const LIST_END = '<!-- ARTICLE_LIST_END -->';
