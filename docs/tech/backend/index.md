@@ -17,4 +17,5 @@ toc: content
 <!-- ARTICLE_LIST_START -->
 - [微服务理解](/tech/backend/microservices-understanding)
 - [服务通信理解](/tech/backend/service-communication-understanding)
+- [分布式一致理解](/tech/backend/distributed-consistency-understanding)
 <!-- ARTICLE_LIST_END -->
