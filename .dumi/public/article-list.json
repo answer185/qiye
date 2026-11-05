@@ -110,7 +110,7 @@
       {
         "title": "AI编程",
         "link": "/tech/ai",
-        "date": 1793670486977
+        "date": 1793672935325
       },
       {
         "title": "使用 AGENTS.md 管理 AI 编程上下文",
@@ -183,19 +183,19 @@
     "title": "后端开发",
     "list": [
       {
-        "title": "分布式一致理解",
-        "link": "/tech/backend/distributed-consistency-understanding",
-        "date": 1793672894500
-      },
-      {
         "title": "微服务理解",
         "link": "/tech/backend/microservices-understanding",
-        "date": 1793670663627
+        "date": 1793691583414
       },
       {
         "title": "后端开发",
         "link": "/tech/backend",
-        "date": 1793670597662
+        "date": 1793672935325
+      },
+      {
+        "title": "分布式一致理解",
+        "link": "/tech/backend/distributed-consistency-understanding",
+        "date": 1793672894500
       },
       {
         "title": "服务通信理解",

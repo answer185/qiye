@@ -66,6 +66,7 @@ const STATIC_DATA: Record<string, { title: string; list: { title: string; link: 
       { title: '微服务理解', link: '/tech/backend/microservices-understanding' },
       { title: '服务通信理解', link: '/tech/backend/service-communication-understanding' },
       { title: '分布式一致理解', link: '/tech/backend/distributed-consistency-understanding' },
+      { title: '分布式事务理解', link: '/tech/backend/distributed-transaction-understanding' },
     ],
   },
   ai: {
